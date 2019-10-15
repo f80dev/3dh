@@ -377,6 +377,7 @@ export default class Files extends Vue {
   }
 
   refreshFiles(){
+      debugger
       this.hourglass="Files listing";
       HTTP.get(this.server_api+"/datas/measures?dir="+this.dir)
           .then(response => {
