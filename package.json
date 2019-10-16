@@ -6,7 +6,7 @@
   "license": "MIT",
   "root_api": "https://server.f80.fr:5000",
   "keywords": [
-    "data",
+    "data","api","graph",
     "clustering",
     "ai"
   ],

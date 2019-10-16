@@ -355,7 +355,7 @@ export default class Files extends Vue {
 
   mounted(){
       if(this.$route.query["api"]!=null)this.server_api=this.$route.query["api"];
-      if(!this.server_api.startsWith("http"))this.server_api="http://"+this.server_api;
+      if(!this.server_api.startsWith("http"))this.server_api="https://"+this.server_api;
       if(!this.server_api.endsWith(":5000"))this.server_api=this.server_api+":5000";
 
       if(Cookies.get("dir")!=undefined)
