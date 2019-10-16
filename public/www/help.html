@@ -33,23 +33,44 @@
            
                 <h4 class="card-header">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq1">
-						Quel est l'objectif de 3DH
+						Quel est l'objectif de 3DH ?
 					</a>
                 </h4>
        
             <div id="faq1" class="panel-collapse collapse in">
                 <div class="card-block zone-faq">
                     <p>
-                        3DH permet l'étude d'un ensemble de point à n composantes via une représentation 3D interractive.<br>
-                    Il opére également certains calculs dont les résultats se retrouvent également visualisables dans la représentation 3D.
-                        3DH permet également de travailler sur les graphes, fournissant
+                    3DH permet l'étude de jeu de données à n composantes via :<br><br>
+                    - la production de métriques adaptées aux données<br>
+                    - la mise en oeuvre de différents algorithmes de clustering (Analyse spectral, HDBSCAN, HAC) ou de recherche de communautés (pour les graphes)<br>
+                    - une représentation 3D interactive de ces données (exportable en vidéo),<br>
+                    <br>
+                    Les données peuvent être : <br><br>
+                    - un ensemble de vecteurs à n dimensions : mesure, population, parc client, etc ...<br>
+                    - un graphe : réseau social, ...<br>
+                    </p>
+
+                    <div style="width:100%;text-align: center">
+                        <h4>Exemple de représentation et manipulation d'un clustering</h4>
+                        <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/xPU1IeEfDZA?controls=0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe><br><br>
+                        <h4>Exemple de représentation et manipulation d'un graphe (ici les personnages des Misérables de V.Hugo)</h4>
+                        <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/2lO8UanShmE?controls=0"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <p>
+                        sur les graphes, 3DH délivre
                         <ul>
                     <li>la meilleur représentation possible compte tenu des relations existantes entre les noeuds,</li>
                     <li>certaines caractéristiques des noeuds (calcul de centralité notamment)</li>
-                    <li>recherche de communauté, suivant plusieurs algorithmes</li>
+                    <li>une analyse des communautés, suivant plusieurs algorithmes</li>
                 </ul>
-
-
 
                     </p>
                 </div>
@@ -65,7 +86,9 @@
           
             <div id="faq2" class="panel-collapse collapse in">
                 <div class="card-block zone-faq">
-					3DH dispose d'une représentation 3D interactive. Pour activer les commandes vous pouvez utiliser la barre d'outil dans le mode "Preview" et le clavier avec les touches suivantes :<br><br>
+                    L'originalité de 3DH réside notamment dans sa capacité à manipuler la représentation de vos données en temps réel.
+                    Ces manipulations se font par la barre d'outil dans le mode "Preview" ou via le claviez par certains raccourcis, listés ci-dessous :
+                    <br><br>
 					
                        - <strong>'s'</strong> et SHIFT+'s' respectivement montre et cache tous les points<br>
                         - <strong>'m'</strong> et SHIFT+'m' opere un filtre sur les points pour les montrer / cacher<br>
@@ -85,22 +108,9 @@
                         - 'ALT+click' grossis / réduit les points du même nom<br>
                         - 'click droit' permet d'enregistrer la visualisation en format image<br>
 					
-					<br>Dans plusieurs cas, l'usage simultanée de la touche majuscule (SHIFT) inverse l'action de la touche principale<br><br>
+					<br>Dans plusieurs cas, l'usage simultanée de la touche majuscule (SHIFT) inverse l'action de la touche principale
+                    <br><br>
 
-
-                    <div style="width:100%;text-align: center">
-                        Exemple de représentation et manipulation d'un clustering :<br>
-                    <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/xPU1IeEfDZA?controls=0"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe><br><br>
-                    Exemple de représentation et manipulation d'un graphe :<br>
-                    <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/2lO8UanShmE?controls=0"
-                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                    </div>
                 </div>
             </div>
         </div>
@@ -115,19 +125,81 @@
          
             <div id="faq3" class="panel-collapse collapse in">
                 <div class="card-block zone-faq">   
-					A tout moment il est possible :<br>
+					A tout moment, il est possible :<br>
 					    - d'enregistrer une vidéo de l'affichage 3D et des manipulations effectuées (voir
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq2"> commandes disponibles</a>)<br>
 						- un click droit sur le graphique permet d'enregistrer une image statique de la représentation affichée<br>
-						- lorsqu'on on est en affichage plein écran, il est possible d'envoyer le lien présent dans la barre du navigateur. Dans ce cas, le destinataire pourra également manipuler les données.<br>
+						- lorsqu'on on est en affichage plein écran, il est possible d'envoyer le lien présent dans la barre du navigateur.
+
+                    Dans ce cas, le destinataire pourra également manipuler les données.<br>
                 </div>
             </div>
         </div>
-		
+
+        <div class="card ">
+
+                <h4 class="card-header">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq40">
+                        Comment "charger" un fichier ?
+                    </a>
+                </h4>
+
+            <div id="faq40" class="panel-collapse collapse in">
+                <div class="card-block zone-faq">
+                    Les données à analyser peuvent être contenu dans plusieurs types de fichier.
+                    Pour les données en fichier plat, 3DH reconnait le CSV et Excel.<br>
+                    Pour les graphes, on utilisera le format GraphML (souvent noté par l'extension gml).
+                    <br>
+                    Les graphes peuvent également être construit à partir de la matrice d'adjacence (au format CSV ou Excel)
+                    ou par un seuil sur la distance euclidienne entre les mesures.<br>
+
+                    <br>
+                    Les données sont récupérées soit directement à partir du client, soit par upload sur le serveur de calcul :<br>
+                    - dans un répertoire public : dans ce cas, tous les utilisateurs de 3DH y ont accès<br>
+                    - dans un répertoire privée, accessible uniquement par mot de passe<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="card ">
+
+                <h4 class="card-header">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq41">
+                        Peut on utiliser directement l'API ?
+                    </a>
+                </h4>
+
+            <div id="faq41" class="panel-collapse collapse in">
+                <div class="card-block zone-faq">
+                    3DH est également directement utilisable sous forme d'API.<br>
+                    Dans ce cas, les paramétres sont directement passé dans l'URL suivant la syntaxe suivante :<br>
+
+                    <table cellpadding="2px" cellspacing="2px" style="border:grey solid 1px;font-size: small;">
+                        <tr>
+                        <td>Pour les graphes</td>
+                        <td>
+                            https://server.f80.fr:5000/graph/'nom_du_graph'>/fr?algo_comm='algorithme'&dir=public&notext=True&nometrics=True&add_property=False&autorotate=True&limit=5000&pca=1&processors=2
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Pour les ensembles de données</td>
+                            <td>
+                                https://server.f80.fr:5000/job/'fichier data'/NO/noparam/graph?filter=&dir=public&notext=True&nometrics=True&add_property=False&autorotate=True&limit=5000&pca=1&processors=2
+                            </td>
+                        </tr>
+                    </table>
+
+                    Pour utiliser l'API directement, il est recommendé de passer par l'interface cliente
+                    qui va générer l'url correspondant à la représentation.
+                </div>
+            </div>
+        </div>
+
+
 		<div class="card ">
                 <h4 class="card-header">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq4">
-						Quel type de données importer ?
+						Quel format de données sont acceptés pour l'importation ?
 					</a>
                 </h4>
            
@@ -173,7 +245,7 @@
            
                 <h4 class="card-header">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq8">
-						Peut on faire varier les paramétres des algorithme de clustering
+						Peut on faire varier les paramétres des algorithme de clustering ?
 					</a>
                 </h4>
            
@@ -312,7 +384,7 @@
         <div class="card">
             <h4 class="card-header">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#faq15">
-                    Quels sont les algorithmes utilisés par 3DH?
+                    Quels sont les algorithmes utilisés par 3DH ?
                 </a>
             </h4>
 
@@ -334,7 +406,16 @@
             </div>
         </div>
 
-
+    </div>
+          <footer class="text-center">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <p>Copyright © F80. All rights reserved.</p>
+                      </div>
+                  </div>
+              </div>
+          </footer>
 	</div>
 		
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
