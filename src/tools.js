@@ -42,7 +42,6 @@ function cutParams(params) {
 function showlink(document, multiple) {
     if (multiple === void 0) { multiple = false; }
     var domain = document.location.protocol + document.location.host;
-    debugger;
     if (!domain.endWitdh("/"))
         domain = domain + "/";
     var notif = document.getElementById("email").value;

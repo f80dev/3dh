@@ -77,7 +77,10 @@
                               </div>
                           </div>
 
-                          <FileFormat v-if="(selected_file.length>0 || url.length>0) && type=='data'" v-on:format="updateFormat($event)" v-bind:cols="data_cols"></FileFormat>
+                          <FileFormat v-if="(selected_file.length>0 || url.length>0) && type=='data'"
+                                      v-on:format="updateFormat($event)"
+                                      v-bind:cols="data_cols">
+                          </FileFormat>
 
                       </md-card-content>
 
@@ -353,10 +356,14 @@ export default class Files extends Vue {
     rows=0;
     server_api=ROOT_API;
 
+
+
+
+
   mounted(){
       if(this.$route.query["api"]!=null)this.server_api=this.$route.query["api"];
       if(!this.server_api.startsWith("http"))this.server_api="https://"+this.server_api;
-      if(!this.server_api.endsWith(":5000"))this.server_api=this.server_api+":5000";
+      if(!this.server_api.endsWith(":5500"))this.server_api=this.server_api+":5500";
 
       if(Cookies.get("dir")!=undefined)
           this.dir=""+Cookies.get("dir");
@@ -376,8 +383,10 @@ export default class Files extends Vue {
 
   }
 
+
+
+
   refreshFiles(){
-      debugger
       this.hourglass="Files listing";
       HTTP.get(this.server_api+"/datas/measures?dir="+this.dir)
           .then(response => {
@@ -400,9 +409,27 @@ export default class Files extends Vue {
           });
   }
 
+
+
+
+
     updateFormat(evt:any){
+      if(evt==null){
+          debugger;
+          evt={index:"",measure:"",prop:""}
+          let i=0;
+          for(let i=0;i<this.data_cols.length;i++){
+              if(this.data_cols[i].format=="index")evt.index=evt.index+i+",";
+              if(this.data_cols[i].format=="measure")evt.measure=evt.measure+i+",";
+              if(this.data_cols[i].format=="property")evt.prop=evt.prop+i+",";
+          }
+      }
       this.format="index:"+evt.index+"_measures:"+evt.measure+"_properties:"+evt.prop;
     }
+
+
+
+
 
     showClusters(){
         var url=this.showLink({pca:0},"clusters");
@@ -511,7 +538,7 @@ export default class Files extends Vue {
             HTTP.get(url_analyse).then((r:any)=>{
                 r=r.data;
                 this.hourglass="";
-                this.data_cols=r.columns
+                this.data_cols=r.columns;
                 this.rows=r.rows;
                 this.type=r.type;
                 for(var i=0;i<this.data_cols.length;i++){
@@ -541,6 +568,7 @@ export default class Files extends Vue {
 
 
     showLink(options:any={},service="graph"):string {
+        this.updateFormat(null);
         var url_file=this.selected_file+this.url;
         if(url_file.length==0)return("");
 

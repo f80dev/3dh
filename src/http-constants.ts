@@ -5,7 +5,7 @@ let baseURL;
 export const CONFIG=require("../package.json");
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    baseURL = 'http://localhost:5000'
+    baseURL = 'http://localhost'
 } else {
     baseURL = CONFIG.root_api;
 }

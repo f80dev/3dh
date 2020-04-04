@@ -48,7 +48,6 @@
 
     function showlink(document:any,multiple=false):string[] {
         var domain:any=document.location.protocol+document.location.host;
-        debugger
         if(!domain.endWitdh("/"))domain=domain+"/";
 
         var notif=document.getElementById("email").value;

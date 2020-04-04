@@ -13,7 +13,7 @@ Vue.use(VueMaterial);
 Vue.use(VueRouter);
 
 Vue.config.productionTip = false;
-Vue.config.silent = true
+Vue.config.silent = true;
 
 const router = new VueRouter({
     mode: 'history',
