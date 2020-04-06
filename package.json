@@ -4,7 +4,7 @@
   "private": true,
   "description": "3D & Data Analysis",
   "license": "MIT",
-  "root_api": "https://server.f80.fr:5000",
+  "root_api": "https://server.f80.fr:5500",
   "keywords": [
     "data","api","graph",
     "clustering",
