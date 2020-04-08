@@ -414,14 +414,14 @@ export default class Files extends Vue {
 
 
     updateFormat(evt:any){
+
       if(evt==null){
-          debugger;
-          evt={index:"",measure:"",prop:""}
+          evt={index:"",measure:"",prop:"",exclude:""}
           let i=0;
           for(let i=0;i<this.data_cols.length;i++){
               if(this.data_cols[i].format=="index")evt.index=evt.index+i+",";
               if(this.data_cols[i].format=="measure")evt.measure=evt.measure+i+",";
-              if(this.data_cols[i].format=="property")evt.prop=evt.prop+i+",";
+              if(this.data_cols[i].format=="prop")evt.prop=evt.prop+i+",";
           }
       }
       this.format="index:"+evt.index+"_measures:"+evt.measure+"_properties:"+evt.prop;
@@ -568,7 +568,7 @@ export default class Files extends Vue {
 
 
     showLink(options:any={},service="graph"):string {
-        this.updateFormat(null);
+
         var url_file=this.selected_file+this.url;
         if(url_file.length==0)return("");
 
@@ -589,7 +589,6 @@ export default class Files extends Vue {
                 sParam="noparam";
                 this.algo="NO";
             }
-
             rc=this.server_api+"/job/"+url_file+"/"+this.algo+"/"+sParam+"/"+service+"?filter="+this.format;
         }
 
