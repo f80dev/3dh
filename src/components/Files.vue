@@ -241,6 +241,7 @@
                               <div class="md-layout-item"><md-checkbox v-model="nometrics" value="1">No metrics</md-checkbox></div>
                               <div class="md-layout-item"><md-checkbox v-model="add_property" value="1">Add Property</md-checkbox></div>
                               <div class="md-layout-item"><md-checkbox v-model="autorotate" value="1">Auto Rotate</md-checkbox></div>
+                              <div class="md-layout-item"><md-checkbox v-model="nograph" value="0">No Graphic</md-checkbox></div>
                           </div>
                             <br>
                           <div class="md-layout">
@@ -345,6 +346,7 @@ export default class Files extends Vue {
     nometrics:string="1";
     add_property:string="0";
     autorotate:string="1";
+    nograph:string="0";
     pca:number=1;
     type:string="data";
     format:string="";
@@ -614,6 +616,7 @@ export default class Files extends Vue {
         if(options.nometrics==null)options.nometrics=(this.nometrics=="1");
         if(options.add_property==null)options.add_property=(this.add_property=="1");
         if(options.autorotate==null)options.autorotate=(this.autorotate=="1");
+        if(options.nograph==null)options.nograph=(this.nograph=="1");
         if(options.limit==null)options.limit=this.limit;
         if(options.pca==null)options.pca=this.pca;
         if(options.processors==null)options.processors=this.processors;
