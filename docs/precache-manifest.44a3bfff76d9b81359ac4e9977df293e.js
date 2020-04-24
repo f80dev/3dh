@@ -20,20 +20,20 @@ self.__precacheManifest = [
     "url": "/js/app.6041ff3e.js"
   },
   {
-    "revision": "69bed3a87c30526de9479bda6cc82b37",
-    "url": "/treeview.html"
-  },
-  {
     "revision": "3a0250f8e36a18b314de8d004f1e8076",
     "url": "/treeview/jsonview.css"
   },
   {
-    "revision": "5d385a20ddd8d017da54e946f2328ba8",
-    "url": "/treeview/jsonview.js"
-  },
-  {
     "revision": "a1db0db1ccf8c89ab112b0515c20a3ef",
     "url": "/waiting.html"
+  },
+  {
+    "revision": "69bed3a87c30526de9479bda6cc82b37",
+    "url": "/treeview.html"
+  },
+  {
+    "revision": "5d385a20ddd8d017da54e946f2328ba8",
+    "url": "/treeview/jsonview.js"
   },
   {
     "revision": "5d657bba8f8f4b71fdfcfdb37dff127a",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/www/help.html"
   },
   {
-    "revision": "bb38938b1b9056351722c813ddbbbe70",
-    "url": "/www/js/bootstrap-4.0.0.js"
-  },
-  {
     "revision": "b1dbc64f8b1dfe0c089dd55b09bbbc72",
     "url": "/www/js/popper.min.js"
+  },
+  {
+    "revision": "bb38938b1b9056351722c813ddbbbe70",
+    "url": "/www/js/bootstrap-4.0.0.js"
   },
   {
     "revision": "c17ae4f0529e0bc2fc887d2471ae124b",
