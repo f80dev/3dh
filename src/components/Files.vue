@@ -238,10 +238,11 @@
 
                           <div class="md-layout md-gutter">
                               <div class="md-layout-item"><md-checkbox v-model="notext" value="1">No text</md-checkbox></div>
-                              <div class="md-layout-item"><md-checkbox v-model="nometrics" value="1">No metrics</md-checkbox></div>
-                              <div class="md-layout-item"><md-checkbox v-model="add_property" value="1">Add Property</md-checkbox></div>
-                              <div class="md-layout-item"><md-checkbox v-model="autorotate" value="1">Auto Rotate</md-checkbox></div>
-                              <div class="md-layout-item"><md-checkbox v-model="nograph" value="0">No Graphic</md-checkbox></div>
+                              <div class="md-layout-item"><md-checkbox v-model="nometrics" value="1">Add Metrics</md-checkbox></div>
+                              <div class="md-layout-item"><md-checkbox v-model="add_property" value="1">Properties</md-checkbox></div>
+                              <br>
+                              <div class="md-layout-item"><md-checkbox v-model="autorotate" value="1">Auto Rotation</md-checkbox></div>
+                              <div class="md-layout-item"><md-checkbox v-model="nograph" value="0">No graphic</md-checkbox></div>
                           </div>
                             <br>
                           <div class="md-layout">
@@ -345,7 +346,7 @@ export default class Files extends Vue {
     notext:string="1";
     nometrics:string="1";
     add_property:string="0";
-    autorotate:string="1";
+    autorotate:string="0";
     nograph:string="0";
     pca:number=1;
     type:string="data";
